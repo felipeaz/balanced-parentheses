@@ -53,8 +53,5 @@ func isBalanced(str string) bool {
 			toClose = append(toClose, chStr)
 		}
 	}
-	if len(toClose) > 0 {
-		return false
-	}
-	return true
+	return len(toClose) > 0
 }
