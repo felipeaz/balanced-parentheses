@@ -49,9 +49,9 @@ func isBalanced(str string) bool {
 			}
 			// remove the last element
 			toClose = toClose[:numOfOpenedSignals]
-		} else {
-			toClose = append(toClose, chStr)
+			continue
 		}
+		toClose = append(toClose, chStr)
 	}
-	return len(toClose) > 0
+	return len(toClose) == 0
 }
